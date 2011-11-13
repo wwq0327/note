@@ -7,10 +7,6 @@
 
     处理程序
     
-    :date: 2011-10-17
-    :author: wwq0327 <wwq0327@gmail.com>
-    :license: LGPL 2 or later (see README/COPYING/LICENSE)
-
 """
 
 class Handler:
