@@ -40,6 +40,20 @@ class ListItemRule(Rule):
         handler.end(self.type)
         return True
 
+class Header1Rule(Rule):
+    """=号开始为h1"""
+
+    type = 'header1'
+
+    def condition(self, block):
+        return block[0] == '='
+
+    def action(self, block, handler):
+        handler.start(self.type)
+        handler.feed(block[1:].strip())
+        handler.end(self.type)
+        return True
+
 class ListRule(ListItemRule):
     """列表从不是列表项的块和随后的列表项之间，在最后一个连列表项之后结束"""
 
