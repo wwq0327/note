@@ -8,6 +8,7 @@
     处理程序
     
 """
+#from rules import HanderManyRule
 
 class Handler:
     """处理Parser调用的方法的对象"""
@@ -79,6 +80,12 @@ class HTMLRenderer(Handler):
 
     def end_header1(self):
         print '</h2>'
+
+    ## def start_header(self):
+    ##     pass
+
+    ## def end_header(self):
+    ##     pass
         
     def sub_emphasis(self, match):
         return '<em>%s</em>' % match.group(1)
