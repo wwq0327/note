@@ -54,26 +54,26 @@ class Header1Rule(Rule):
         handler.end(self.type)
         return True
 
-class HeaderManyRule(Rule):
-    """=号开始为h1"""
+## class HeaderManyRule(Rule):
+##     """=号开始为h1"""
 
-    type = 'header'
+##     type = 'header'
 
-    def __init__(self, size):
-        self.size = size
+##     def __init__(self, size):
+##         self.size = size
 
-    @property
-    def get_size(self):
-        return self.size
+##     @property
+##     def get_size(self):
+##         return self.size
 
-    def condition(self, block):
-        return block[0] == '=' * self.size
+##     def condition(self, block):
+##         return block[0] == '=' * self.size
 
-    def action(self, block, handler):
-        handler.start(self.type)
-        handler.feed(block[self.size:].strip())
-        handler.end(self.type)
-        return True
+##     def action(self, block, handler):
+##         handler.start(self.type)
+##         handler.feed(block[self.size:].strip())
+##         handler.end(self.type)
+##         return True
 
 class ListRule(ListItemRule):
     """列表从不是列表项的块和随后的列表项之间，在最后一个连列表项之后结束"""
