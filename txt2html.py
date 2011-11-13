@@ -35,6 +35,9 @@ class Txt2HTMLParser(Parser):
         ## email
         self.addFilter(r'([\.a-zA-Z]+@[\.a-zA-Z]+[a-zA-z]+)', 'mail')
 
+        ## header
+        ## self.addFilter(r'^=+(.+?)', 'header')
+
 def main():
     h = HTMLRenderer()
     parser = Txt2HTMLParser(h)

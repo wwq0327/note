@@ -96,5 +96,10 @@ class HTMLRenderer(Handler):
     def sub_mail(self, match):
         return '<a href="mailto:%s">%s</a>' % (match.group(1), match.group(1))
 
+    ## def sub_header(self, match):
+    ##     return '<h%s>%s</h%s>' % (len(match.group(0)),
+    ##                               match.group(1),
+    ##                               len(match.group(0)))
+
     def feed(self, data):
         print data
